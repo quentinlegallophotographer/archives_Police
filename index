@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Base de données - Commissariat</title>
+  <body background="https://getwallpapers.com/wallpaper/full/6/a/c/439487.jpg">
+    runs:
+  using: 'node24'
+  main: 'main.js'
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0000;
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      border: 1px solid #1f2937;
+      padding: 40px;
+      width: 400px;
+      background-color: #111827;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: #9ca3af;
+      margin-bottom: 30px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      background: #0b1220;
+      border: 1px solid #374151;
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #1f2937;
+      color: white;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 1px;
+    }
+
+    button:hover {
+      background: #374151;
+    }
+
+    .error {
+      margin-top: 15px;
+      color: #ef4444;
+      font-size: 12px;
+      display: none;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 10px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>COMMISSARIAT CENTRAL DE MARSEILLE</h1>
+    <div class="subtitle">Base de données</div>
+
+    <input id="search" placeholder="ENTRER UN CODE OU NOM" />
+
+    <button onclick="search()">ACCÉDER AU DOSSIER</button>
+
+    <div class="error" id="error">
+      Aucun dossier trouvé.
+    </div>
+
+    <div class="footer">
+      Accès restreint — Niveau 3
+    </div>
+  </div>
+
+  <script>
+    function search() {
+      const input = document.getElementById("search").value.trim().toUpperCase();
+      const routes = {
+        "VILAIN": "https://iili.io/BBVB0I1.png",
+"ASHCROFT": "https://iili.io/BBVB0I1.png" ,
+"JULIAN ASHCROFT ": "https://iili.io/BBVB0I1.png" , 
+        "RAVENSCROFT": "https://iili.io/BKZsGe9.md.png",
+        "ST JOHN'S": "https://iili.io/BKZsGe9.md.png",
+        "STJOHN'S": "https://iili.io/BKZsGe9.md.png",
+        "HOLLOWAY": "https://iili.io/BBM1rqx.png",
+        "BEATRICE HOLLOWAY": "https://iili.io/BBM1rqx.png",
+        "VANCE": "https://iili.io/BBMwYga.jpg",
+        "ARABELLA VANCE": "https://iili.io/BBMwYga.jpg",
+        "WHITCOMBE": "https://iili.io/BKtKoRn.md.png",
+        "WILDERHAM": "https://iili.io/BKtKoRn.md.png",
+       "PEMBROKE" : "https://iili.io/BBMg71V.png" ,
+"CLARA PEMBROKE" : "https://iili.io/BBMg71V.png" ,
+"47-B" :  "https://iili.io/BBV0K57.png" ,
+"47B" :  "https://iili.io/BBV0K57.png" ,
+"PIECE47-B" :  "https://iili.io/BBV0K57.png" ,
+"PIECE47B" :  "https://iili.io/BBV0K57.png" ,
+         "CHLOE" : "https://iili.io/BEFCMsR.png",
+  "COURNUT" : "https://iili.io/BEFCMsR.png",
+   "CHLOE COURNUT" : "https://iili.io/BEFCMsR.png",
+        
+      
+    };
+
+         if (routes[input]) {
+        window.location.href = routes[input];
+      } else {
+        document.getElementById("error").style.display = "block";
+      }
+
+    }
+
+    // Permet d'appuyer sur "Entrée"
+    document.getElementById("search").addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        search();
+      }
+    });
+  </script>
+
+</body>
+</html>
+  </script>
+  <style>
+p {
+  background-image: url('img_girl.jpg');
+}
+</style>
+
+</body>
+</html>
